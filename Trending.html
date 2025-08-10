@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The top three</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526, #414345);
+            color: #fff;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 0 0 18px 18px;
+        }
+        nav h1 {
+            margin-left: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            background: #4e54c8;
+        }
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        .movie-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie-row img {
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 180px;
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .movie-row img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 6px 24px rgba(78,84,200,0.25);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <h1>Movie Night</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trending.html" class="active">Trending</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="submit.html">Submit</a></li>
+    </ul>
+</nav>
+
+<section class="page-content">
+    <h2>Trending Now</h2>
+    <div class="movie-row">
+        <img src="F1.jpeg" alt="Trending 1">
+        <img src="Mav.jpeg" alt="Trending 2">
+        <img src="John.jpeg" alt="Trending 3">
+        <img src="die.jpeg" alt="Trending 4">
+        <img src="Jeff.jpeg" alt="Trending 5">
+        <img src="twister.jpeg" alt="Trending 6">
+        <img src="twisters.jpeg" alt="Trending 7">
+        <img src="rush.jpeg" alt="Trending 8">
+        <img src="night.jpeg" alt="Trending 9">
+        <img src="joh.jpeg" alt="Trending 10">
+        <img src="greace.jpeg" alt="Trending 11">
+        <img src="free.jpeg" alt="Trending 12">
+        <img src="spider.jpeg" alt="Trending 13">
+        <img src="glass.jpeg" alt="Trending 14">
+        <img src="bumble.jpeg" alt="Trending 15">
+        <img src="gladiator.jpeg" alt="Trending 16">
+        <img src="death.jpeg" alt="Trending 17">
+        <img src="Bone.jpeg" alt="Trending 18">
+        <img src="Need.jpeg" alt="Trending 19">
+        <img src="Cool.jpeg" alt="Trending 20">
+        <img src="Fast.jpeg" alt="Trending 3">
+        <img src="free.jpeg" alt="Trending 3">
+
+        
+    </div>
+</section>
+</body>
+</html>
