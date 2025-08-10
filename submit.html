@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Recommendation - Movie Night</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526, #414345);
+            color: #fff;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        nav h1 {
+            margin-left: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            background: #4e54c8;
+        }
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        form {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            background: #222;
+            color: #fff;
+            font-size: 1rem;
+            resize: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            background: #333;
+        }
+        button[type="submit"] {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: background 0.2s, transform 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #8f94fb, #4e54c8);
+            transform: translateY(-2px) scale(1.04);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <h1>Movie Night</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="submit.html" class="active">Submit</a></li>
+    </ul>
+</nav>
+
+<section class="page-content">
+    <h2>Submit a Movie Recommendation</h2>
+    <form>
+        <input type="text" placeholder="Movie Title" required>
+        <textarea placeholder="Why do you recommend this?" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+</body>
+</html>

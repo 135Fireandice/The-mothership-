@@ -1,0 +1,129 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres - Movie Night</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526, #414345);
+            color: #fff;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 0 0 18px 18px;
+        }
+        nav h1 {
+            margin-left: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            background: #4e54c8;
+        }
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        .genres {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .genres li {
+            background: #4e54c8;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .genres li:hover, .genres li.active {
+            background: #8f94fb;
+            color: #232526;
+        }
+        .movie-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie-row img {
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 180px;
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .movie-row img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 6px 24px rgba(78,84,200,0.25);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <h1>Movie Night</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="genres.html" class="active">Genres</a></li>
+        <li><a href="submit.html">Submit</a></li>
+    </ul>
+</nav>
+
+
+
+<section class="page-content">
+    <h2>Browse by Genre</h2>
+    <ul class="genres">
+        <li data-genre="Action">Action</li>
+        <li data-genre="Romance">Romance</li>
+        <li data-genre="Comedy">Comedy</li>
+        <li data-genre="Drama">Drama</li>
+        <li data-genre="Horror">Horror</li>
+    </ul>
+
+    <div class="movie-gallery">
+        <div class="movie-row" id="movieRow"></div>
+    </div>
+</section>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

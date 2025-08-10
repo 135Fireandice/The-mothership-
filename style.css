@@ -1,0 +1,190 @@
+:root {
+    --purple1: #911ade;
+    --purple2: #8416ef;
+    --turquoise: #11e7db;
+    --blue1: #0958cd;
+    --blue2: #2d0ce2;
+    --bubblegum: #62d2ff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--purple1);
+    color: white;
+}
+
+/* NAVIGATION */
+nav {
+    background: linear-gradient(90deg, var(--purple1), var(--blue2));
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--bubblegum);
+}
+
+/* HERO */
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--purple2), var(--turquoise));
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+/* MOVIE GALLERY */
+.gallery {
+    padding: 2rem;
+}
+
+.movie-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.movie-row img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+    transform: scale(1.05);
+}
+
+/* PAGES */
+.page-content {
+    padding: 2rem;
+}
+
+.genres {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+.genres li {
+    background-color: var(--blue1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.genres li:hover {
+    background-color: var(--bubblegum);
+    color: var(--purple1);
+}
+
+/* FORM */
+form {
+    background-color: var(--blue2);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input, textarea {
+    background-color: var(--bubblegum);
+    color: var(--purple1);
+}
+
+button {
+    background-color: var(--turquoise);
+    color: var(--purple1);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--purple1);
+}
+.fade-in {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.movie-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+
+.movie-row img {
+    border-radius: 10px;
+    flex: 0 0 auto;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+    transform: scale(1.05);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
