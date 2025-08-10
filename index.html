@@ -1,0 +1,123 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Motherships - Movie Night</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #232526, #414345);
+            color: #fff;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 0 0 18px 18px;
+        }
+        nav h1 {
+            margin-left: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            background: #4e54c8;
+        }
+        .hero {
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #4e54c8, #8f94fb);
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+        .gallery {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery h3 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .movie-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .movie-row img {
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 180px;
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .movie-row img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 6px 24px rgba(78,84,200,0.25);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <h1>Movie Night</h1>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="submit.html">Submit</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>For we all know who the top 5 for the best</h2>
+    <p>Get the pop corn ready </p>
+</section>
+
+<!-- MOVIE GALLERY -->
+<section class="gallery">
+    <h3>Featured Movies</h3>
+    <div class="movie-row">
+        <img src="F1.jpeg" alt="Movie 1">
+        <img src="Need.jpeg" alt="Movie 2">
+        <img src="Cool.jpeg" alt="Movie 3">
+        <img src="Mav.jpeg" alt="Movie 4">
+        <img src="Bad Boys.jpeg" alt="Movie 5">
+    </div>
+</section>
+
+</body>
+</html>
