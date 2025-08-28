@@ -6,6 +6,51 @@
     <title>Submit Recommendation - Movie Night</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+        /* For tablets */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  nav ul {
+    display: block;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+        .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  flex: 1 1 300px; /* Flexible boxes */
+}
+        /* Not responsive */
+.container {
+  width: 1200px;
+}
+
+/* Responsive */
+.container {
+  width: 90%;
+  max-width: 1200px;
+}
+
         body {
             background: linear-gradient(120deg, #232526, #414345);
             color: #fff;

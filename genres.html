@@ -6,93 +6,155 @@
     <title>Genres - Movie Night</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background: linear-gradient(120deg, #232526, #414345);
-            color: #fff;
-            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-        }
-        nav {
-            background: rgba(30, 30, 30, 0.95);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            border-radius: 0 0 18px 18px;
-        }
-        nav h1 {
-            margin-left: 20px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0 20px;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: background 0.2s;
-        }
-        nav ul li a.active, nav ul li a:hover {
-            background: #4e54c8;
-        }
-        .page-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
-        h2 {
-            margin-bottom: 30px;
-            font-size: 2rem;
-            font-weight: 500;
-            text-align: center;
-        }
-        .genres {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            padding: 0;
-            margin-bottom: 2rem;
-        }
-        .genres li {
-            background: #4e54c8;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: background 0.2s, color 0.2s;
-        }
-        .genres li:hover, .genres li.active {
-            background: #8f94fb;
-            color: #232526;
-        }
-        .movie-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .movie-row img {
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-            width: 180px;
-            height: auto;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .movie-row img:hover {
-            transform: scale(1.07);
-            box-shadow: 0 6px 24px rgba(78,84,200,0.25);
-        }
+     /* Reset image and video scaling */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General page styling */
+body {
+  background: linear-gradient(120deg, #232526, #414345);
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 0 0 18px 18px;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin: 5px 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: #4e54c8;
+}
+
+/* Page Content */
+.page-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 20px 0;
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Genres */
+.genres {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.genres li {
+  background: #4e54c8;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.genres li:hover,
+.genres li.active {
+  background: #8f94fb;
+  color: #232526;
+}
+
+/* Movies */
+.movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.movie-row img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  width: 160px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.movie-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(78,84,200,0.25);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .movie-row img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1rem;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .genres li {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  .movie-row img {
+    width: 120px;
+  }
+}
+
     </style>
 </head>
 <body>

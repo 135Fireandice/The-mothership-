@@ -6,86 +6,152 @@
     <title>The Motherships - Movie Night</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background: linear-gradient(120deg, #232526, #414345);
-            color: #fff;
-            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-        }
-        nav {
-            background: rgba(30, 30, 30, 0.95);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            border-radius: 0 0 18px 18px;
-        }
-        nav h1 {
-            margin-left: 20px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0 20px;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: background 0.2s;
-        }
-        nav ul li a.active, nav ul li a:hover {
-            background: #4e54c8;
-        }
-        .hero {
-            padding: 4rem 2rem 2rem 2rem;
-            text-align: center;
-            background: linear-gradient(180deg, #4e54c8, #8f94fb);
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-        }
-        .gallery {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .gallery h3 {
-            font-size: 1.7rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-        .movie-row {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .movie-row img {
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-            width: 180px;
-            height: auto;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .movie-row img:hover {
-            transform: scale(1.07);
-            box-shadow: 0 6px 24px rgba(78,84,200,0.25);
-        }
+       /* Reset images & videos */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General page styling */
+body {
+  background: linear-gradient(120deg, #232526, #414345);
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 0 0 18px 18px;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin: 5px 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: #4e54c8;
+}
+
+/* HERO */
+.hero {
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #4e54c8, #8f94fb);
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* GALLERY */
+.gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+.gallery h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.movie-row {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie-row img {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  width: 180px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.movie-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(78,84,200,0.25);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .movie-row img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1rem;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .gallery h3 {
+    font-size: 1.3rem;
+  }
+  .movie-row img {
+    width: 110px;
+  }
+}
+
     </style>
 </head>
 <body>
